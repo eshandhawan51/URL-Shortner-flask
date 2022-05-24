@@ -1,0 +1,19 @@
+<h1 id="url-shortner-home-page">URL Shortner Home Page</h1>
+
+
+<form action="/shorten" id="input-link" method="POST">
+         
+        Link: <input type="text" name="link"
+                    placeholder="Enter Valid Link">
+  
+        <br><br>
+        <input type="submit" value="submit">
+  
+    </form>
+{%if error %}
+    <p><strong> {{ error }} </strong></p>
+{%endif%}    
+
+{%if url %}
+<strong> <a href={{url}}>{{ url }} </a> </strong>
+{%endif%}
